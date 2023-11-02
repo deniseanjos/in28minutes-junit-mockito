@@ -6,13 +6,17 @@ import java.util.List;
 import com.in28minutes.data.api.TodoService;
 
 public class TodoBusinessImpl {
-	
+
+	public static void main(String[] args) {
+		
+	}
+
 	private TodoService todoService;
 
 	public TodoBusinessImpl(TodoService todoService) {
 		this.todoService = todoService;
 	}
-	
+
 	public List<String> retrieveTodosRelatedToSpring(String user) {
 		List<String> filteredTodos = new ArrayList<String>();
 		List<String> todos = todoService.retrieveTodos(user);
@@ -23,6 +27,6 @@ public class TodoBusinessImpl {
 		}
 		return filteredTodos;
 	}
-	
+
 
 }
